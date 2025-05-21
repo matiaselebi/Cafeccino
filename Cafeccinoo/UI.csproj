@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28E7593C-D2E5-4AC2-BCC6-A0F034033A6A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Cafeccinoo</RootNamespace>
+    <AssemblyName>Cafeccino</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Cafeccinoo.UIMenu</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>Imagen de WhatsApp 2024-04-30 a las 08.07.21_36c4d44d.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.5.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13.4\lib\net461\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.2\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.9.0.2\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.9.0.2\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.9.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.0\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FRMBitacoraCambios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMBitacoraCambios.Designer.cs">
+      <DependentUpon>FRMBitacoraCambios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMBitacoraEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMBitacoraEventos.Designer.cs">
+      <DependentUpon>FRMBitacoraEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMGestionDeProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMGestionDeProveedores.Designer.cs">
+      <DependentUpon>FRMGestionDeProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMOrdenCompra.Designer.cs">
+      <DependentUpon>FRMOrdenCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMPagarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMPagarCompra.Designer.cs">
+      <DependentUpon>FRMPagarCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMPreRegistrarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMPreRegistrarProveedor.Designer.cs">
+      <DependentUpon>FRMPreRegistrarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMRecepcionCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMRecepcionCompras.Designer.cs">
+      <DependentUpon>FRMRecepcionCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMRegistrarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMRegistrarProveedor.Designer.cs">
+      <DependentUpon>FRMRegistrarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMReparacionBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMReparacionBD.Designer.cs">
+      <DependentUpon>FRMReparacionBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMReporteInteligente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMReporteInteligente.Designer.cs">
+      <DependentUpon>FRMReporteInteligente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMRespaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMRespaldos.Designer.cs">
+      <DependentUpon>FRMRespaldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMSolicitudCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMSolicitudCotizacion.Designer.cs">
+      <DependentUpon>FRMSolicitudCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMCambiarContraseña.Designer.cs">
+      <DependentUpon>FRMCambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMCambiarIdioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMCambiarIdioma.Designer.cs">
+      <DependentUpon>FRMCambiarIdioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMCerrarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMCerrarSesion.Designer.cs">
+      <DependentUpon>FRMCerrarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMCobrarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMCobrarVenta.Designer.cs">
+      <DependentUpon>FRMCobrarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMGenerarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMGenerarFactura.Designer.cs">
+      <DependentUpon>FRMGenerarFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMGenerarReporteFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMGenerarReporteFactura.Designer.cs">
+      <DependentUpon>FRMGenerarReporteFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMGestionDeProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMGestionDeProductos.Designer.cs">
+      <DependentUpon>FRMGestionDeProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMGestionDeClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMGestionDeClientes.Designer.cs">
+      <DependentUpon>FRMGestionDeClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMGestionDeFamilias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMGestionDeFamilias.Designer.cs">
+      <DependentUpon>FRMGestionDeFamilias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMGestionDePerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMGestionDePerfiles.Designer.cs">
+      <DependentUpon>FRMGestionDePerfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMGestionDeUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMGestionDeUsuarios.Designer.cs">
+      <DependentUpon>FRMGestionDeUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMRegistrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMRegistrarCliente.Designer.cs">
+      <DependentUpon>FRMRegistrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMSeleccionarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMSeleccionarProductos.Designer.cs">
+      <DependentUpon>FRMSeleccionarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMIniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMIniciarSesion.Designer.cs">
+      <DependentUpon>FRMIniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMUI.Designer.cs">
+      <DependentUpon>FRMUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIMenu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FRMBitacoraCambios.resx">
+      <DependentUpon>FRMBitacoraCambios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMBitacoraEventos.resx">
+      <DependentUpon>FRMBitacoraEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMGestionDeProveedores.resx">
+      <DependentUpon>FRMGestionDeProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMOrdenCompra.resx">
+      <DependentUpon>FRMOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMPagarCompra.resx">
+      <DependentUpon>FRMPagarCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMPreRegistrarProveedor.resx">
+      <DependentUpon>FRMPreRegistrarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMRecepcionCompras.resx">
+      <DependentUpon>FRMRecepcionCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMRegistrarProveedor.resx">
+      <DependentUpon>FRMRegistrarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMReparacionBD.resx">
+      <DependentUpon>FRMReparacionBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMReporteInteligente.resx">
+      <DependentUpon>FRMReporteInteligente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMRespaldos.resx">
+      <DependentUpon>FRMRespaldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMSolicitudCotizacion.resx">
+      <DependentUpon>FRMSolicitudCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMCambiarContraseña.resx">
+      <DependentUpon>FRMCambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMCambiarIdioma.resx">
+      <DependentUpon>FRMCambiarIdioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMCerrarSesion.resx">
+      <DependentUpon>FRMCerrarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMCobrarVenta.resx">
+      <DependentUpon>FRMCobrarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMGenerarFactura.resx">
+      <DependentUpon>FRMGenerarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMGenerarReporteFactura.resx">
+      <DependentUpon>FRMGenerarReporteFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMGestionDeProductos.resx">
+      <DependentUpon>FRMGestionDeProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMGestionDeClientes.resx">
+      <DependentUpon>FRMGestionDeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMGestionDeFamilias.resx">
+      <DependentUpon>FRMGestionDeFamilias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMGestionDePerfiles.resx">
+      <DependentUpon>FRMGestionDePerfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMGestionDeUsuarios.resx">
+      <DependentUpon>FRMGestionDeUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMRegistrarCliente.resx">
+      <DependentUpon>FRMRegistrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMSeleccionarProductos.resx">
+      <DependentUpon>FRMSeleccionarProductos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMIniciarSesion.resx">
+      <DependentUpon>FRMIniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMUI.resx">
+      <DependentUpon>FRMUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Respaldos.pdf" />
+    <None Include="Resources\Verificar recepción de compras.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{94d92327-7820-4546-a75d-ba4e925968e3}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{c35a6904-16b7-407b-a866-8df45e59c0a0}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servicio\Servicio.csproj">
+      <Project>{ab91f2d2-794d-45f2-a347-908adaac1145}</Project>
+      <Name>Servicio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\425bd415577a278e49f19c19843d20b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\441052332573ef178f06755d5d93ef94.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AyudaAdmin.pdf" />
+    <None Include="Resources\AyudaUser.pdf" />
+    <None Include="Resources\Bitácora de cambios.pdf" />
+    <None Include="Resources\Bitácora de eventos.pdf" />
+    <None Include="Resources\Cambiar contraseña.pdf" />
+    <None Include="Resources\Cambiar idioma.pdf" />
+    <None Include="Resources\Cerrar sesión.pdf" />
+    <None Include="Resources\Facturar.pdf" />
+    <None Include="Resources\Generar orden de compra.pdf" />
+    <None Include="Resources\Generar reporte de venta.pdf" />
+    <None Include="Resources\Generar reporte inteligente.pdf" />
+    <None Include="Resources\Generar solicitud de cotización.pdf" />
+    <None Include="Resources\Gestión de perfiles.pdf" />
+    <None Include="Resources\Gestión de usuarios.pdf" />
+    <None Include="Resources\Iniciar sesión.pdf" />
+    <None Include="Resources\Maestros negocio.pdf" />
+    <None Include="Resources\OIP.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8316630.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagen de WhatsApp 2024-04-30 a las 08.07.21_36c4d44d.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
